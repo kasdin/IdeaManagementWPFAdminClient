@@ -6,42 +6,61 @@
         xmlns:local="clr-namespace:IdeaManagementWPFAdminClient"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Grid x:Name="GrdLogin" HorizontalAlignment="Left" Height="410" Margin="10,10,-0.4,0" VerticalAlignment="Top" Width="784" d:IsHidden="True">
-            <TextBox x:Name="TxtUsername" HorizontalAlignment="Left" Height="23" Margin="300,179,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="120"/>
-            <PasswordBox x:Name="TxtPassword" HorizontalAlignment="Left" Height="20" Margin="300,211,0,0" VerticalAlignment="Top" Width="120"/>
-            <Button x:Name="BtnLogin" Content="Login" HorizontalAlignment="Left" Margin="322,247,0,0" VerticalAlignment="Top" Width="75" Click="BtnLogin_Click"/>
-        </Grid>
+    <Grid Background="#FFFF4F5A">
+        <Border BorderBrush="White" BorderThickness="1,1,1,1" CornerRadius="20,20,20,20" Margin="45,36,34.6,30" Background="White">
+            <Grid x:Name="GrdLogin" HorizontalAlignment="Left" Height="313" Margin="39.2,17.2,0,0" VerticalAlignment="Top" Width="664" Background="White">
+                <Rectangle Fill="WhiteSmoke" HorizontalAlignment="Left" Height="218" Margin="402,54,0,0" VerticalAlignment="Top" Width="202" Stroke="#FFFF4F5A"/>
+                <Rectangle Fill="#FFFFC9CB" HorizontalAlignment="Left" Height="217" Margin="501,54,0,0" VerticalAlignment="Top" Width="101"/>
+                <TextBox x:Name="TxtUsername" HorizontalAlignment="Left" Height="28" Margin="417,139,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="168" BorderBrush="#FFFF4F5A" BorderThickness="0,0,0,1" TextAlignment="Center" FontSize="16" Background="#FFFFDDDE"/>
+                <PasswordBox x:Name="TxtPassword" HorizontalAlignment="Left" Height="28" Margin="419,186,0,0" VerticalAlignment="Top" Width="166" BorderThickness="0,0,0,1" BorderBrush="#FFFF4F5A" Background="#FFFFDDDE"/>
+                <Button x:Name="BtnLogin" Content="Login" HorizontalAlignment="Left" Margin="449,227,0,0" VerticalAlignment="Top" Width="101" Click="BtnLogin_Click" Background="#FFFF4F5A" Foreground="#FFF6F6F6" Height="29" FontSize="16" VerticalContentAlignment="Stretch"/>
+                <Image HorizontalAlignment="Left" Height="336" VerticalAlignment="Top" Width="374" Source="Assets/idea-pic.jpg"/>
+                <Image HorizontalAlignment="Left" Height="20" Margin="417,139,0,0" VerticalAlignment="Top" Width="22" Source="Assets/user (2).png" RenderTransformOrigin="0.836,0.99"/>
+                <Image HorizontalAlignment="Left" Height="32" Margin="417,186,0,0" VerticalAlignment="Top" Width="22" Source="Assets/padlock (1).png" RenderTransformOrigin="0.571,0.644"/>
+                <Separator HorizontalAlignment="Left" Height="93" Margin="244,33,0,0" VerticalAlignment="Top" Width="353" RenderTransformOrigin="0.256,0.432">
+                    <Separator.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="90"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Separator.RenderTransform>
+                </Separator>
+                <Image HorizontalAlignment="Left" Height="55" Margin="473,75,0,0" VerticalAlignment="Top" Width="54" Source="Assets/user (4).png"/>
+                <Label Content="LOGIN" HorizontalAlignment="Left" Margin="402,23,0,0" VerticalAlignment="Top" Background="#FFFF4F5A" Foreground="White" Width="202" Height="43" FontSize="24" FontWeight="Bold" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            </Grid>
+        </Border>
         <Grid x:Name="GrdAdminCreateNew" HorizontalAlignment="Left" Height="320" Margin="158,62,0,0" VerticalAlignment="Top" Width="464" Visibility="Collapsed">
-            <Button x:Name="BtnManage" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="BtnManage_Click" Margin="532,-45,-143,0"/>
-            <Border>
+            <Button x:Name="BtnManage" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="BtnManage_Click" Margin="529,-60,-140,0"/>
+            <Border Margin="-3,-15,3,15">
                 <Border.BorderBrush>
                     <SolidColorBrush Color="red" Opacity="0.5"/>
                 </Border.BorderBrush>
             </Border>
 
-            <Label Content="Company name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="189,47,0,0"  />
+            <Label Content="Company name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="186,32,0,0"  />
 
-            <Label Content="URL" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="216,204,0,0" RenderTransformOrigin="-0.757,0.648" />
+            <Label Content="URL" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="213,189,0,0" RenderTransformOrigin="-0.757,0.648" />
 
-            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="160,78,0,0" x:Name="TxtName"  />
+            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="157,63,0,0" x:Name="TxtName"  />
 
-            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="160,235,0,0" x:Name="TxtURL"  />
+            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="157,220,0,0" x:Name="TxtURL"  />
 
-            <Button Content="Add New" HorizontalAlignment="Left" VerticalAlignment="Top" Width="142" x:Name="BtnAddNew"  Margin="160,275,0,0" Height="24" Click="BtnAddNew_Click"/>
-            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="160,132,0,0" x:Name="TxtPhoneNo"  />
-            <Label Content="Phone Number" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="191,101,0,0"  />
-            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="160,186,0,0" x:Name="TxtMail"  />
-            <Label Content="E-mail&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="216,160,0,0" RenderTransformOrigin="-0.757,0.648" Height="26" />
+            <Button Content="Add New" HorizontalAlignment="Left" VerticalAlignment="Top" Width="142" x:Name="BtnAddNew"  Margin="157,260,0,0" Height="24" Click="BtnAddNew_Click"/>
+            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="157,117,0,0" x:Name="TxtPhoneNo"  />
+            <Label Content="Phone Number" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="188,86,0,0"  />
+            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="157,170,0,0" x:Name="TxtMail"  />
+            <Label Content="E-mail&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="213,145,0,0" RenderTransformOrigin="-0.757,0.648" Height="26" />
         </Grid>
         <Grid x:Name="GrdManage1" HorizontalAlignment="Left" Height="473" Margin="0,-53,0,0" VerticalAlignment="Top" Width="784" Visibility="Collapsed">
-            <Label Content="All Customers" HorizontalAlignment="Left" Margin="65,66,0,0" VerticalAlignment="Top"/>
-            <Grid x:Name="GrdEdit" HorizontalAlignment="Left" Height="263" Margin="491,99,0,0" VerticalAlignment="Top" Width="238" Visibility="Hidden">
+            <Label Content="All Customers" HorizontalAlignment="Left" Margin="133,60,0,0" VerticalAlignment="Top"/>
+            <Grid x:Name="GrdEdit" HorizontalAlignment="Left" Height="263" Margin="491,99,0,0" VerticalAlignment="Top" Width="238" Visibility="Collapsed">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="47*"/>
                     <RowDefinition Height="53*"/>
                 </Grid.RowDefinitions>
-                <Button x:Name="BtnUpdate" Content="Update" HorizontalAlignment="Left" Margin="79,110.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" />
+                <Button x:Name="BtnEditUpdate" Content="Update" HorizontalAlignment="Left" Margin="48,110,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" />
                 <Label Content="Company name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="77,5,0,0"  />
                 <Label Content="URL" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="104,44.4,0,0" RenderTransformOrigin="-0.757,0.648" Grid.Row="1" />
                 <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="48,36,0,0" x:Name="TxtEditName"  />
@@ -50,8 +69,9 @@
                 <Label Content="Phone Number" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="79,59,0,0"  />
                 <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="48,25.4,0,0" x:Name="TxtEditMail"  Grid.Row="1"  />
                 <Label Content="E-mail&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="104,0.4,0,0" RenderTransformOrigin="-0.757,0.648" Height="26" Grid.Row="1" />
+                <Button x:Name="BtnEditDelete" Content="Delete" HorizontalAlignment="Left" Margin="128,110,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="BtnEditDelete_Click" />
             </Grid>
-            <ScrollViewer x:Name="ScrollCustomerList" HorizontalAlignment="Left" Height="337" VerticalAlignment="Top" Width="215" RenderTransformOrigin="0.5,0.5" Margin="19,98,0,0">
+            <ScrollViewer x:Name="ScrollCustomerList" HorizontalAlignment="Left" Height="337" VerticalAlignment="Top" Width="215" RenderTransformOrigin="0.5,0.5" Margin="65,98,0,0">
                 <ScrollViewer.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>

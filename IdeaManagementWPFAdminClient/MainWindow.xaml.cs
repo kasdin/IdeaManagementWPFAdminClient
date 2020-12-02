@@ -98,5 +98,24 @@ namespace IdeaManagementWPFAdminClient
             TxtEditPhoneNo.Text = customer.fld_phoneNo;
             TxtEditUrl.Text = customer.fld_url;
         }
+
+        private void BtnEditDelete_Click(object sender, RoutedEventArgs e)
+        {
+            CustomersController controller = new CustomersController();
+            controller.DeleteCustomer(TxtEditName.Text);
+            StackListOfCustomers.Children.Clear();
+
+            List<Button> listOfBtns = controller.GenerateCustomerList();
+            foreach (var button in listOfBtns)
+            {
+                StackListOfCustomers.Children.Add(button);
+            }
+
+            TxtEditName.Clear();
+            TxtEditMail.Clear();
+            TxtEditPhoneNo.Clear();
+            TxtEditUrl.Clear();
+
+        }
     }
 }

@@ -151,6 +151,26 @@
     <Folder Include="ViewModel\" />
     <Folder Include="View\" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\idea-pic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\user %284%29.png" />
+    <Resource Include="Assets\user %283%29.png" />
+    <Resource Include="Assets\bgk2.jpg" />
+    <Resource Include="Assets\bgk1.jpg" />
+    <Resource Include="Assets\bgk.jpg" />
+    <Resource Include="Assets\padlock %281%29.png" />
+    <Resource Include="Assets\user %282%29.png" />
+    <Resource Include="Assets\user %281%29.png" />
+    <Content Include="Assets\user.svg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

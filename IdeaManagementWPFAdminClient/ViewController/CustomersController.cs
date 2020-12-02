@@ -119,6 +119,42 @@ namespace IdeaManagementWPFAdminClient.ViewController
             return customer;
         }
 
+        public void DeleteCustomer(string name)
+        {
+
+            Console.WriteLine("Delete CUstomer" + name);
+
+            HttpClient client = new HttpClient();
+
+            client.BaseAddress = new Uri("https://localhost:44351/");
+
+
+            var url = "api/customers?name=" + name;
+
+
+            HttpResponseMessage response = client.DeleteAsync(url).Result;
+
+
+            if (response.IsSuccessStatusCode)
+
+            {
+
+                MessageBox.Show("Company Deleted");
+
+               
+
+            }
+
+            else
+
+            {
+
+                MessageBox.Show("Error Code" + response.StatusCode + " : Message - " + response.ReasonPhrase);
+
+            }
+
+        }
+
 
     }
 }
